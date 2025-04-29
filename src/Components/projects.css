@@ -1,0 +1,90 @@
+.projects-slider {
+    display: flex;
+    overflow-x: auto;
+    gap: 1.5rem;
+    scroll-snap-type: x mandatory;
+    padding: 20px 0;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+  }
+  
+  .projects-slider::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .project-card {
+    flex: 0 0 300px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    color: #F2FDFF;
+    scroll-snap-align: start;
+    transition: transform 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 20px #7BBBFF;
+    h2 {
+      color: black;
+    }
+    text-decoration-color: black;
+  }
+  
+  .project-card ul li::before {
+    content: '➤';
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 14px;
+    color: #F2FDFF;
+    transition: transform 0.3s ease;
+  }
+
+  .project-card ul li:hover::before {
+    transform: translateX(-5px);
+    color: black;
+  }
+
+  .project-card h2 {
+    color: #7BBBFF;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .project-card h2 a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .project-card h2 a:hover {
+    color: black;
+    text-decoration: underline;
+  }
+  .project-card h4 {
+    color: #B8A9FF;
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .project-card .date {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 10px;
+  }
+  
+  .project-card ul {
+    padding-left: 0;
+    list-style: none;
+    margin-left: 0;
+  }
+  
+  .project-card ul li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
